@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../lib/siteConfig";
+
+const singleHref = siteConfig.checkout.singleSessionUrl || `${Astro.base}/contact?intent=buy-single`;
+const bundleHref = siteConfig.checkout.bundle6Url || `${Astro.base}/contact?intent=buy-bundle`;
+---
+
+<BaseLayout
+  title="Sessions • Maco Strategy Coaching"
+  description="Purchase coaching sessions and bundles."
+>
+  <section class="hero">
+    <div class="pill">Purchase</div>
+    <h1>Book and pay for sessions</h1>
+    <p>
+      Purchase a single session or a discounted bundle. After checkout, you’ll be able to schedule using Zoho Bookings.
+    </p>
+    <div class="cta-row">
+      <a class="button primary" href={siteConfig.bookingsUrl}>Schedule (Zoho Bookings)</a>
+      <a class="button" href={`${Astro.base}/#book`}>Free discovery call</a>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Options">
+    <h2>Options</h2>
+    <div class="pricing">
+      <article class="price-card">
+        <div class="price">
+          <strong>$59</strong>
+          <small>Single session</small>
+        </div>
+        <p class="note">One 60-minute coaching session. Pay as you go, no commitment required.</p>
+        <div class="cta-row">
+          <a class="button accent" href={singleHref}>Buy single session</a>
+        </div>
+      </article>
+
+      <article class="price-card featured">
+        <div class="price">
+          <strong>$300</strong>
+          <small>6-session bundle</small>
+        </div>
+        <p class="note">Six 60-minute sessions at a discounted rate. Best for clients working toward a defined goal.</p>
+        <div class="cta-row">
+          <a class="button accent" href={bundleHref}>Buy 6-session bundle</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="disclaimer" aria-label="Questions">
+    <p>
+      Questions before you purchase? Email <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+    </p>
+  </section>
+</BaseLayout>

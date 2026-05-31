@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Maco Strategy | Leadership & Career Coaching"
+  description="Leadership and career coaching for driven professionals—structured conversations that create clarity and momentum."
+>
+  <section class="hero">
+    <div class="pill">Leadership &amp; Career Coaching</div>
+    <h1>Clarity, confidence, and a plan you’ll actually follow.</h1>
+    <p>
+      Coaching is where you close the gap between <strong>where you are</strong> and <strong>where you want to be</strong>.
+      I work with driven professionals virtually — on your schedule, from anywhere.
+    </p>
+    <div class="cta-row">
+      <a class="button accent" href="#book">Book a free intro call</a>
+      <a class="button primary" href={`${Astro.base}/about`}>About your coach</a>
+    </div>
+  </section>
+
+  <section class="grid" aria-label="What this coaching supports">
+    <article class="card">
+      <h2>Who I work with</h2>
+      <ul class="list">
+        <li>Professionals considering a career transition or promotion</li>
+        <li>First-time managers and emerging leaders finding their footing</li>
+        <li>Entrepreneurs and small business owners navigating growth decisions</li>
+        <li>High achievers ready to level up their leadership and communication</li>
+        <li>Anyone feeling stuck, overwhelmed, or ready for a purposeful next chapter</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h2>Topics we can explore</h2>
+      <p class="lede">A few common themes — we’ll tailor sessions to your situation and goals.</p>
+      <div class="chips" aria-label="Coaching topics">
+        <span class="chip">Career clarity &amp; direction</span>
+        <span class="chip">Leadership presence</span>
+        <span class="chip">Confidence &amp; self-belief</span>
+        <span class="chip">Navigating transitions</span>
+        <span class="chip">Goal-setting &amp; accountability</span>
+        <span class="chip">Work-life integration</span>
+        <span class="chip">Strategic decision-making</span>
+        <span class="chip">Communication skills</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" aria-label="What to expect">
+    <h2>What to expect</h2>
+    <div class="grid">
+      <article class="card">
+        <h2>A real conversation</h2>
+        <p>No scripts or canned advice. Sessions are tailored to your situation, your goals, and what actually matters to you.</p>
+      </article>
+      <article class="card">
+        <h2>Honest partnership</h2>
+        <p>I’ll ask the questions you haven’t asked yourself yet — and give you honest perspective without judgment.</p>
+      </article>
+      <article class="card">
+        <h2>Progress you can feel</h2>
+        <p>Sessions are structured to move you forward: clarity, commitments, and accountability built into every call.</p>
+      </article>
+      <article class="card">
+        <h2>Virtual &amp; flexible</h2>
+        <p>Sessions are primarily held via Zoho Meeting. Serving clients nationwide.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-label="About your coach">
+    <h2>About your coach</h2>
+    <p class="lede">
+      I bring nearly two decades of experience leading large, complex organizations at the highest levels — including a
+      <strong>190+ person technical department</strong> and oversight of a <strong>$65M technology program</strong>.
+      I hold an <strong>MBA from the University of Florida</strong>, a <strong>Master of Science in Analytics</strong>,
+      and advanced certifications in cybersecurity, cloud, and project management. I’m the founder of Maco Strategy LLC
+      and co-founder of Tailwind Behavior Services.
+    </p>
+  </section>
+
+  <section class="section" aria-label="Pricing">
+    <h2>Pricing</h2>
+    <div class="pricing">
+      <article class="price-card">
+        <div class="price">
+          <strong>$59</strong>
+          <small>Single session</small>
+        </div>
+        <p class="note">One 60-minute coaching session. Pay as you go, no commitment required.</p>
+      </article>
+      <article class="price-card featured">
+        <div class="price">
+          <strong>$300</strong>
+          <small>6-session bundle</small>
+        </div>
+        <p class="note">Six 60-minute sessions at a discounted rate. Best for clients working toward a defined goal.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="callout" id="book" aria-label="Free intro call">
+    <h2>Let’s start with a free 20-minute discovery call.</h2>
+    <p>20 minutes. No pressure. Just a conversation to see if we’re a good fit.</p>
+    <div class="cta-row">
+      <a
+        class="button accent"
+        href="https://steve-macostrategy.zohobookings.com/#/4757585000000154005"
+        aria-label="Book your free 20-minute discovery call"
+      >
+        Book your free discovery call
+      </a>
+      <a class="button primary" href="https://macostrategy.com" aria-label="Visit macostrategy.com">Visit macostrategy.com</a>
+    </div>
+    <p class="note">
+      <strong>Email:</strong> <a href="mailto:Steve@macostrategy.com">Steve@macostrategy.com</a>
+    </p>
+  </section>
+
+  <section class="disclaimer" aria-label="Disclaimer">
+    <p>
+      <strong>Please note:</strong> Due to conflict-of-interest constraints, Maco Strategy is unable to provide coaching
+      services to active-duty, reserve, or National Guard military members.
+    </p>
+  </section>
+</BaseLayout>

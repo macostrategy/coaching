@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../lib/siteConfig";
+
+const intent = Astro.url.searchParams.get("intent");
+const intentLabel =
+  intent === "buy-single"
+    ? "Buying a single session"
+    : intent === "buy-bundle"
+      ? "Buying the 6-session bundle"
+      : "General inquiry";
+---
+
+<BaseLayout title="Contact • Maco Strategy Coaching" description="Contact Maco Strategy Coaching.">
+  <section class="hero">
+    <div class="pill">Contact</div>
+    <h1>Get in touch</h1>
+    <p>
+      Use the form below to reach out. If you’re ready to start, you can also book a free 20-minute discovery call.
+    </p>
+    <div class="cta-row">
+      <a class="button accent" href={siteConfig.bookingsUrl}>Book discovery call</a>
+      <a class="button primary" href={`${Astro.base}/sessions`}>Purchase sessions</a>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Lead capture">
+    <h2>Lead capture</h2>
+    {siteConfig.leadCapture.zohoFormsUrl ? (
+      <>
+        <p class="lede">This form submits to Zoho (and can be integrated into Zoho CRM).</p>
+        <div class="card">
+          <iframe
+            title="Maco Strategy Coaching Lead Form"
+            src={siteConfig.leadCapture.zohoFormsUrl}
+            style="width: 100%; height: 760px; border: 0;"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </>
+    ) : (
+      <>
+        <p class="lede">
+          To route submissions into Zoho CRM reliably on a static site, the simplest approach is to embed a Zoho Forms
+          form that is already connected to your Zoho CRM.
+        </p>
+        <div class="card">
+          <h2 style="margin-top:0">Next step</h2>
+          <p class="lede">
+            Paste your Zoho Forms embed URL into <code>siteConfig.leadCapture.zohoFormsUrl</code> and this page will render it.
+          </p>
+          <p class="note">
+            Intent: <strong>{intentLabel}</strong> (optional query param: <code>?intent=buy-single</code> or <code>?intent=buy-bundle</code>)
+          </p>
+          <p class="note">
+            Or email directly: <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
+          </p>
+        </div>
+      </>
+    )}
+  </section>
+</BaseLayout>

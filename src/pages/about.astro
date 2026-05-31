@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../lib/siteConfig";
+---
+
+<BaseLayout title="About • Maco Coaching" description="About Maco Strategy Coaching.">
+  <section class="hero">
+    <h1>About</h1>
+    <p>
+      Maco Strategy Coaching is structured, practical coaching for professionals who want clarity and momentum without
+      hype. If you’re navigating a transition, stepping into leadership, or simply ready for a more intentional next
+      chapter, we’ll build a plan you can execute.
+    </p>
+    <div class="cta-row">
+      <a class="button primary" href={`${Astro.base}/`}>Back home</a>
+      <a class="button accent" href={`${Astro.base}/#book`}>Free 20-min discovery call</a>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Coach bio">
+    <h2>Stephen Macomber</h2>
+    <div class="bio">
+      <img class="headshot" src={`${Astro.base}/headshot.png`} alt="Headshot of Stephen Macomber" width="320" height="320" />
+      <div>
+        <p class="lede">
+          I bring nearly two decades of experience leading large, complex organizations at the highest levels — including
+          a <strong>190+ person technical department</strong> and oversight of a <strong>$65M technology program</strong>.
+          I hold an <strong>MBA from the University of Florida</strong>, a <strong>Master of Science in Analytics</strong>,
+          and advanced certifications in cybersecurity, cloud, and project management. I’m the founder of Maco Strategy LLC
+          and co-founder of Tailwind Behavior Services.
+        </p>
+        <div class="bio-links">
+          <a class="button primary" href="https://www.linkedin.com/in/stephen-macomber/" rel="me noopener" target="_blank">
+            LinkedIn profile
+          </a>
+          <a class="button" href={`mailto:${siteConfig.contactEmail}`}>Email: {siteConfig.contactEmail}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+const { title = "Maco Strategy Coaching", description = "Coaching programs, resources, and updates." } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="nav">
+        <a class="brand" href={Astro.site ? new URL(Astro.base, Astro.site).pathname : Astro.base}>
+          <span class="logo" aria-hidden="true"></span>
+          <span>Maco Strategy Coaching</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href={`${Astro.base}/`}>Home</a>
+          <a href={`${Astro.base}/sessions`}>Sessions</a>
+          <a href={`${Astro.base}/contact`}>Contact</a>
+          <a href={`${Astro.base}/about`}>About</a>
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="footer">
+        <span>© {new Date().getFullYear()} Maco Strategy LLC</span>
+        <span>Built with Astro • Deployed on GitHub Pages</span>
+      </footer>
+    </div>
+  </body>
+</html>
