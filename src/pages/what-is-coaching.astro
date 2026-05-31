@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getBasePath } from "../lib/paths";
+const basePath = getBasePath();
+---
+
+<BaseLayout
+  title="What Coaching Is • Maco Strategy Coaching"
+  description="What coaching is, what it isn’t, and how it differs from therapy and mentoring."
+>
+  <section class="hero">
+    <div class="pill">Coaching</div>
+    <h1>What coaching is (and what it isn’t)</h1>
+    <p>
+      Coaching is a structured conversation designed to help you clarify what you want, see what’s getting in the way,
+      and follow through on actions that move you forward. It’s collaborative, goal-oriented, and grounded in your real
+      context — not generic advice.
+    </p>
+    <div class="cta-row">
+      <a class="button accent" href={`${basePath}/#book`}>Free 20-min discovery call</a>
+      <a class="button primary" href={`${basePath}/sessions`}>Purchase sessions</a>
+    </div>
+  </section>
+
+  <section class="section" aria-label="How coaching works">
+    <h2>How coaching works</h2>
+    <p class="lede">
+      In a typical session we’ll set an outcome, explore your current reality, surface assumptions and options, and end
+      with clear next steps and accountability. You do the thinking; I help you think better and act with intention.
+    </p>
+    <div class="media" aria-label="ICF coaching process diagram">
+      <img src={`${basePath}/icf-coaching-process.png`} alt="ICF coaching process roadmap" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="section" aria-label="Coaching vs therapy vs mentoring">
+    <h2>Coaching vs. therapy vs. mentoring</h2>
+    <p class="lede">
+      All three can be valuable. The difference is the goal and the role of the person helping you.
+    </p>
+
+    <div class="two-col">
+      <div class="card">
+        <h2>Coaching</h2>
+        <ul class="list">
+          <li>Future-focused: goals, choices, action, follow-through</li>
+          <li>Collaboration: you lead, I guide the process</li>
+          <li>Builds awareness, ownership, and confidence</li>
+          <li>Best for transitions, leadership growth, and clarity</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Therapy</h2>
+        <ul class="list">
+          <li>Often past + present-focused: healing, patterns, mental health</li>
+          <li>Diagnosis and treatment may be involved</li>
+          <li>Best for trauma, anxiety/depression, grief, and clinical support</li>
+          <li>If you’re in crisis, therapy is the right place to start</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Mentoring</h2>
+        <ul class="list">
+          <li>Experience-focused: advice, teaching, “here’s what I’d do”</li>
+          <li>Often role/industry-specific guidance</li>
+          <li>Best when you want a proven path and direct instruction</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>What this means in practice</h2>
+        <p class="lede">
+          A good coach helps you generate your own answers and commitments. A good mentor shares their map. A good therapist
+          helps you heal and function. You can use more than one — many people do.
+        </p>
+      </div>
+    </div>
+
+    <div class="media" aria-label="Mentor vs coach infographic">
+      <img src={`${basePath}/mentor-v-coach.png`} alt="Mentor versus coach comparison" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="section" aria-label="What you can bring to coaching">
+    <h2>What you can bring to coaching</h2>
+    <div class="grid">
+      <article class="card">
+        <h2>A challenge</h2>
+        <p>A situation you’re stuck on, avoiding, or overthinking.</p>
+      </article>
+      <article class="card">
+        <h2>A goal</h2>
+        <p>A promotion, transition, leadership shift, or habit you want to build.</p>
+      </article>
+      <article class="card">
+        <h2>A decision</h2>
+        <p>Something with real tradeoffs where you want clear thinking and accountability.</p>
+      </article>
+      <article class="card">
+        <h2>A pattern</h2>
+        <p>Communication, confidence, boundaries, or focus — anything you want to improve.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="disclaimer" aria-label="Not medical advice">
+    <p>
+      <strong>Important:</strong> Coaching is not therapy and does not diagnose or treat mental health conditions. If you’re
+      experiencing a mental health crisis or feel unsafe, seek immediate professional help.
+    </p>
+  </section>
+
+  <section class="section" aria-label="Optional resources">
+    <h2>Optional resources</h2>
+    <p class="lede">
+      If you’d like to review structure and expectations, here are a couple of reference documents.
+    </p>
+    <div class="cta-row">
+      <a class="button" href={`${basePath}/coaching-agreement-template.pdf`} target="_blank" rel="noopener">
+        Coaching agreement (PDF)
+      </a>
+      <a class="button" href={`${basePath}/icf-level-1-syllabus-matrix.pdf`} target="_blank" rel="noopener">
+        ICF Level 1 syllabus matrix (PDF)
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+

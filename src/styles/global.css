@@ -324,10 +324,36 @@ a:hover { text-decoration: underline; }
   font-size: 13px;
 }
 
+.media {
+  margin-top: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.two-col {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+
+.two-col > * {
+  grid-column: span 6;
+}
+
 @media (max-width: 860px) {
   .card { grid-column: span 12; }
   .price-card { grid-column: span 12; }
   .bio { grid-template-columns: 1fr; }
+  .two-col > * { grid-column: span 12; }
 }
 
 .footer {
