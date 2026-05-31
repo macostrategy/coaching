@@ -9,6 +9,7 @@ const intentLabel =
     : intent === "buy-bundle"
       ? "Buying the 6-session bundle"
       : "General inquiry";
+const basePath = Astro.base === "/" ? "" : Astro.base;
 ---
 
 <BaseLayout title="Contact • Maco Strategy Coaching" description="Contact Maco Strategy Coaching.">
@@ -20,7 +21,7 @@ const intentLabel =
     </p>
     <div class="cta-row">
       <a class="button accent" href={siteConfig.bookingsUrl}>Book discovery call</a>
-      <a class="button primary" href={`${Astro.base}/sessions`}>Purchase sessions</a>
+      <a class="button primary" href={`${basePath}/sessions`}>Purchase sessions</a>
     </div>
   </section>
 

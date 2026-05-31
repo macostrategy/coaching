@@ -2,8 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { siteConfig } from "../lib/siteConfig";
 
-const singleHref = siteConfig.checkout.singleSessionUrl || `${Astro.base}/contact?intent=buy-single`;
-const bundleHref = siteConfig.checkout.bundle6Url || `${Astro.base}/contact?intent=buy-bundle`;
+const basePath = Astro.base === "/" ? "" : Astro.base;
+const singleHref = siteConfig.checkout.singleSessionUrl || `${basePath}/contact?intent=buy-single`;
+const bundleHref = siteConfig.checkout.bundle6Url || `${basePath}/contact?intent=buy-bundle`;
 ---
 
 <BaseLayout
@@ -18,7 +19,7 @@ const bundleHref = siteConfig.checkout.bundle6Url || `${Astro.base}/contact?inte
     </p>
     <div class="cta-row">
       <a class="button primary" href={siteConfig.bookingsUrl}>Schedule (Zoho Bookings)</a>
-      <a class="button" href={`${Astro.base}/#book`}>Free discovery call</a>
+      <a class="button" href={`${basePath}/#book`}>Free discovery call</a>
     </div>
   </section>
 

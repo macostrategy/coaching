@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 const { title = "Maco Strategy Coaching", description = "Coaching programs, resources, and updates." } = Astro.props;
+const basePath = Astro.base === "/" ? "" : Astro.base;
 ---
 <!doctype html>
 <html lang="en">
@@ -19,15 +20,15 @@ const { title = "Maco Strategy Coaching", description = "Coaching programs, reso
   <body>
     <div class="container">
       <header class="nav">
-        <a class="brand" href={Astro.site ? new URL(Astro.base, Astro.site).pathname : Astro.base}>
+        <a class="brand" href={`${basePath}/`}>
           <span class="logo" aria-hidden="true"></span>
           <span>Maco Strategy Coaching</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
-          <a href={`${Astro.base}/`}>Home</a>
-          <a href={`${Astro.base}/sessions`}>Sessions</a>
-          <a href={`${Astro.base}/contact`}>Contact</a>
-          <a href={`${Astro.base}/about`}>About</a>
+          <a href={`${basePath}/`}>Home</a>
+          <a href={`${basePath}/sessions`}>Sessions</a>
+          <a href={`${basePath}/contact`}>Contact</a>
+          <a href={`${basePath}/about`}>About</a>
         </nav>
       </header>
 

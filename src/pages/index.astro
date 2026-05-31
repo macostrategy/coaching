@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const basePath = Astro.base === "/" ? "" : Astro.base;
 ---
 
 <BaseLayout
@@ -15,7 +16,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
     <div class="cta-row">
       <a class="button accent" href="#book">Book a free intro call</a>
-      <a class="button primary" href={`${Astro.base}/about`}>About your coach</a>
+      <a class="button primary" href={`${basePath}/about`}>About your coach</a>
     </div>
   </section>
 
