@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { siteConfig } from "../lib/siteConfig";
+import { getBasePath } from "../lib/paths";
 
-const basePath = Astro.base === "/" ? "" : Astro.base;
+const basePath = getBasePath();
 const singleHref = siteConfig.checkout.singleSessionUrl || `${basePath}/contact?intent=buy-single`;
 const bundleHref = siteConfig.checkout.bundle6Url || `${basePath}/contact?intent=buy-bundle`;
 ---

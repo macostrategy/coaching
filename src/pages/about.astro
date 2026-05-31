@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { siteConfig } from "../lib/siteConfig";
-const basePath = Astro.base === "/" ? "" : Astro.base;
+import { getBasePath } from "../lib/paths";
+const basePath = getBasePath();
 ---
 
 <BaseLayout title="About • Maco Coaching" description="About Maco Strategy Coaching.">

@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
+import { getBasePath } from "../lib/paths";
 const { title = "Maco Strategy Coaching", description = "Coaching programs, resources, and updates." } = Astro.props;
-const basePath = Astro.base === "/" ? "" : Astro.base;
+const basePath = getBasePath();
 ---
 <!doctype html>
 <html lang="en">

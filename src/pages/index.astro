@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const basePath = Astro.base === "/" ? "" : Astro.base;
+import { getBasePath } from "../lib/paths";
+const basePath = getBasePath();
 ---
 
 <BaseLayout

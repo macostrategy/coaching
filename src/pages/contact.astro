@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { siteConfig } from "../lib/siteConfig";
+import { getBasePath } from "../lib/paths";
 
 const intent = Astro.url.searchParams.get("intent");
 const intentLabel =
@@ -9,7 +10,7 @@ const intentLabel =
     : intent === "buy-bundle"
       ? "Buying the 6-session bundle"
       : "General inquiry";
-const basePath = Astro.base === "/" ? "" : Astro.base;
+const basePath = getBasePath();
 ---
 
 <BaseLayout title="Contact • Maco Strategy Coaching" description="Contact Maco Strategy Coaching.">
