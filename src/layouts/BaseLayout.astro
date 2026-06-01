@@ -34,6 +34,20 @@ const basePath = getBasePath();
           <a href={`${basePath}/contact`}>Contact</a>
           <a href={`${basePath}/about`}>About</a>
         </nav>
+
+        <details class="nav-menu" role="navigation" aria-label="Primary (mobile)">
+          <summary class="menu-button">
+            <span class="sr-only">Open menu</span>
+            <span aria-hidden="true" class="menu-icon"></span>
+          </summary>
+          <div class="menu-panel">
+            <a href={`${basePath}/`}>Home</a>
+            <a href={`${basePath}/what-is-coaching`}>What is coaching?</a>
+            <a href={`${basePath}/sessions`}>Sessions</a>
+            <a href={`${basePath}/contact`}>Contact</a>
+            <a href={`${basePath}/about`}>About</a>
+          </div>
+        </details>
       </header>
 
       <main>

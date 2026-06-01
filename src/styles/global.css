@@ -103,6 +103,77 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
 }
 
+.nav-menu {
+  display: none;
+  position: relative;
+}
+
+.menu-button {
+  list-style: none;
+  cursor: pointer;
+  height: 40px;
+  width: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button::-webkit-details-marker { display: none; }
+
+.menu-icon {
+  width: 18px;
+  height: 12px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(var(--brand), var(--brand));
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--brand);
+  border-radius: 2px;
+}
+
+.menu-icon::before { top: 0; }
+.menu-icon::after { bottom: 0; }
+
+.menu-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 220px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 6px;
+  z-index: 10;
+}
+
+.menu-panel a {
+  padding: 10px 10px;
+  border-radius: 12px;
+  color: var(--text);
+}
+
+.menu-panel a:hover {
+  background: rgba(31, 77, 58, 0.06);
+  text-decoration: none;
+}
+
 .hero {
   margin-top: 26px;
   padding: 46px 18px;
@@ -354,6 +425,11 @@ a:hover { text-decoration: underline; }
   .price-card { grid-column: span 12; }
   .bio { grid-template-columns: 1fr; }
   .two-col > * { grid-column: span 12; }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .nav-menu { display: inline-block; }
 }
 
 .footer {
